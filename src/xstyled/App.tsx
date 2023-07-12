@@ -6,9 +6,9 @@ import { Badge } from "@welcome-ui/badge";
 
 export const App: React.FC = () => {
   return (
-    <Box maxW="1200px" mx="auto" pt="5xl">
+    <Box maxW="800px" mx="auto" pt="5xl">
       <a href="/">back</a>
-      <Text variant="h1" textTransform="uppercase">
+      <Text variant="h1" textTransform="uppercase" my="0">
         xstyled
       </Text>
       <Box display="flex" gap="10px" my="3xl">
@@ -29,6 +29,15 @@ export const App: React.FC = () => {
         </Badge>
       </Box>
       <Box my="3xl">
+        <Text lines={1}>
+          1 line Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+          quis viverra lectus, vel tristique turpis. Vivamus magna nulla,
+          elementum in feugiat feugiat, egestas eget nibh. Ut ac justo vitae
+          dolor iaculis gravida. In eu nisl lorem. Cras eu mauris et tortor
+          suscipit accumsan. Duis ullamcorper nisl a justo ultricies, eu
+          consequat risus imperdiet. Phasellus at metus cursus, fringilla tortor
+          eu, scelerisque quam. Donec efficitur porta elit ac malesuada.
+        </Text>
         <Text variant="h1" my="0">
           h1
         </Text>

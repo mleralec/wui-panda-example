@@ -6,7 +6,7 @@ import { ButtonPanda } from "@welcome-ui/button";
 
 export const App: React.FC = () => {
   return (
-    <BoxPanda maxW="1200px" mx="auto" pt="5xl">
+    <BoxPanda maxW="800px" mx="auto" pt="5xl">
       <a href="/">back</a>
       <TextPanda variant="h1" textTransform="uppercase">
         Panda
@@ -29,6 +29,15 @@ export const App: React.FC = () => {
         </BadgePanda>
       </BoxPanda>
       <BoxPanda my="3xl">
+        <TextPanda lines={1}>
+          1 line Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+          quis viverra lectus, vel tristique turpis. Vivamus magna nulla,
+          elementum in feugiat feugiat, egestas eget nibh. Ut ac justo vitae
+          dolor iaculis gravida. In eu nisl lorem. Cras eu mauris et tortor
+          suscipit accumsan. Duis ullamcorper nisl a justo ultricies, eu
+          consequat risus imperdiet. Phasellus at metus cursus, fringilla tortor
+          eu, scelerisque quam. Donec efficitur porta elit ac malesuada.
+        </TextPanda>
         <TextPanda variant="h1" my="0">
           h1
         </TextPanda>
