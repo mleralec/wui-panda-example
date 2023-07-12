@@ -17,6 +17,7 @@
     "@welcome-ui/core": "../welcome-ui/packages/Core",
     "@welcome-ui/icons": "5.0.0-alpha.40",
     "@welcome-ui/system": "../welcome-ui/packages/System",
+    "@welcome-ui/text": "../welcome-ui/packages/Text",
     "@welcome-ui/themes.welcome": "../welcome-ui/packages/Themes/Welcome",
     "@xstyled/styled-components": "^3.8.0",
     "react": "^18.1.0",
