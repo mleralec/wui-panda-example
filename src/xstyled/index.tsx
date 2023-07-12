@@ -3,9 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createTheme, WuiProvider } from "@welcome-ui/core";
 import { welcomeTheme } from "@welcome-ui/themes.welcome";
 
-import { App } from "./App.tsx";
-
-import "./index.css";
+import { App } from "./App";
 
 const theme = createTheme(welcomeTheme);
 

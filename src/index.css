@@ -1,6 +1,0 @@
-@layer reset, base, tokens, recipes, utilities;
-
-/* remove global styles applied by xstyled */
-button {
-  font-size: revert !important;
-}

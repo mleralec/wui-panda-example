@@ -9,5 +9,4 @@ export default defineConfig({
   outdir: '@welcome-ui/panda',
   emitPackage: true,
   presets: [welcomePreset],
-  logLevel: 'info'
 })
