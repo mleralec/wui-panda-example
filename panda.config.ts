@@ -9,8 +9,8 @@ export default defineConfig({
   jsxFramework: 'react',
   outdir: '@welcome-ui/panda',
   emitPackage: true,
-  minify: true,
-  hash: true,
+  minify: false,
+  hash: false,
   presets: [welcomePreset],
   globalCss: wuiGlobalStyles,
 })

@@ -12,7 +12,9 @@ export const App: React.FC = () => {
         xstyled
       </Text>
       <Box display="flex" gap="10px" my="3xl">
-        <Button variant="primary">Primary</Button>
+        <Button variant="primary" backgroundColor="tomato">
+          Primary with custom bg
+        </Button>
         <Button variant="secondary">Secondary</Button>
         <Button variant="tertiary">Tertiary</Button>
         <Button variant="ghost">Ghost</Button>
@@ -71,6 +73,16 @@ export const App: React.FC = () => {
         <Text my="0" variant="subtitle-sm">
           subtitle-sm
         </Text>
+      </Box>
+      <Box>
+        <Button
+          as="a"
+          variant="secondary"
+          href="https://www.welcome-ui.com/"
+          target="_blank"
+        >
+          Link as Button
+        </Button>
       </Box>
     </Box>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import { BoxPanda } from "@welcome-ui/box";
 import { TextPanda } from "@welcome-ui/text";
 import { BadgePanda } from "@welcome-ui/badge";
-import { ButtonPanda } from "@welcome-ui/button";
+import { ButtonPanda, buttonStyles } from "@welcome-ui/button";
 
 export const App: React.FC = () => {
   return (
@@ -12,7 +12,9 @@ export const App: React.FC = () => {
         Panda
       </TextPanda>
       <BoxPanda display="flex" gap="10px" my="3xl">
-        <ButtonPanda variant="primary">Primary</ButtonPanda>
+        <ButtonPanda variant="primary" backgroundColor="tomato">
+          Primary with custom bg
+        </ButtonPanda>
         <ButtonPanda variant="secondary">Secondary</ButtonPanda>
         <ButtonPanda variant="tertiary">Tertiary</ButtonPanda>
         <ButtonPanda variant="ghost">Ghost</ButtonPanda>
@@ -38,7 +40,7 @@ export const App: React.FC = () => {
           consequat risus imperdiet. Phasellus at metus cursus, fringilla tortor
           eu, scelerisque quam. Donec efficitur porta elit ac malesuada.
         </TextPanda>
-        <TextPanda variant="h1" my="0">
+        <TextPanda my="0" variant="h1">
           h1
         </TextPanda>
         <TextPanda my="0" variant="h2">
@@ -71,6 +73,15 @@ export const App: React.FC = () => {
         <TextPanda my="0" variant="subtitle-sm">
           subtitle-sm
         </TextPanda>
+      </BoxPanda>
+      <BoxPanda>
+        <a
+          className={buttonStyles({ variant: "secondary" })}
+          href="https://www.welcome-ui.com/"
+          target="_blank"
+        >
+          Link as Button
+        </a>
       </BoxPanda>
     </BoxPanda>
   );
