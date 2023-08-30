@@ -1,16 +1,35 @@
 import React from "react";
 import { BoxPanda } from "@welcome-ui/box";
+import { LinkPanda } from "@welcome-ui/link";
 import { TextPanda } from "@welcome-ui/text";
 import { BadgePanda } from "@welcome-ui/badge";
 import { ButtonPanda, buttonStyles } from "@welcome-ui/button";
+import { AccordionPanda, useAccordion } from "@welcome-ui/accordion";
+import { RightIconPanda } from "@welcome-ui/icons";
+import { styled } from "@welcome-ui/panda/jsx";
+
+const ButtonLink = styled("a", buttonStyles);
 
 export const App: React.FC = () => {
+  const accordion = useAccordion();
+
   return (
-    <BoxPanda maxW="800px" mx="auto" pt="5xl">
+    <BoxPanda maxW="800px" mx="auto" py="5xl">
       <a href="/">back</a>
       <TextPanda variant="h1" textTransform="uppercase">
         Panda
       </TextPanda>
+      <BoxPanda display="flex" gap="xl" my="xxl">
+        <LinkPanda variant="primary">Link Primary</LinkPanda>
+        <LinkPanda variant="secondary">Link Secondary</LinkPanda>
+      </BoxPanda>
+      <AccordionPanda
+        icon={<RightIconPanda />}
+        title="Accordion"
+        store={accordion}
+      >
+        Content
+      </AccordionPanda>
       <BoxPanda display="flex" gap="10px" my="3xl">
         <ButtonPanda variant="primary" backgroundColor="tomato">
           Primary with custom bg
@@ -75,13 +94,13 @@ export const App: React.FC = () => {
         </TextPanda>
       </BoxPanda>
       <BoxPanda>
-        <a
-          className={buttonStyles({ variant: "secondary" })}
+        <ButtonLink
           href="https://www.welcome-ui.com/"
           target="_blank"
+          variant="primary-info"
         >
           Link as Button
-        </a>
+        </ButtonLink>
       </BoxPanda>
     </BoxPanda>
   );

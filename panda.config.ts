@@ -4,13 +4,14 @@ import { welcomePreset } from '@welcome-ui/themes.welcome'
 
 export default defineConfig({
   preflight: true,
-  include: ['./src/**/*.{ts,tsx}', './node_modules/@welcome-ui/**/dist/*.mjs'],
+  include: ['./src/panda/**/*.{ts,tsx}', './node_modules/@welcome-ui/**/dist/*.mjs'],
   exclude: [],
   jsxFramework: 'react',
   outdir: '@welcome-ui/panda',
   emitPackage: true,
-  minify: false,
-  hash: false,
+  optimize: true,
+  minify: true,
+  hash: true,
   presets: [welcomePreset],
   globalCss: wuiGlobalStyles,
 })

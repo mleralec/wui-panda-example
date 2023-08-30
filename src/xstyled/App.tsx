@@ -3,6 +3,7 @@ import { Box } from "@welcome-ui/box";
 import { Text } from "@welcome-ui/text";
 import { Button } from "@welcome-ui/button";
 import { Badge } from "@welcome-ui/badge";
+import { Icons } from "@welcome-ui/icons.font";
 
 export const App: React.FC = () => {
   return (
@@ -11,6 +12,8 @@ export const App: React.FC = () => {
       <Text variant="h1" textTransform="uppercase" my="0">
         xstyled
       </Text>
+      <Icons.Actions size="md" />
+      <Icons.Add size="lg" />
       <Box display="flex" gap="10px" my="3xl">
         <Button variant="primary" backgroundColor="tomato">
           Primary with custom bg
