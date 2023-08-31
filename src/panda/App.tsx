@@ -3,12 +3,13 @@ import { BoxPanda } from "@welcome-ui/box";
 import { LinkPanda } from "@welcome-ui/link";
 import { TextPanda } from "@welcome-ui/text";
 import { BadgePanda } from "@welcome-ui/badge";
-import { ButtonPanda, buttonStyles } from "@welcome-ui/button";
+import { ButtonPanda } from "@welcome-ui/button";
 import { AccordionPanda, useAccordion } from "@welcome-ui/accordion";
 import { RightIconPanda } from "@welcome-ui/icons";
 import { styled } from "@welcome-ui/panda/jsx";
+import { button } from "@welcome-ui/panda/recipes";
 
-const ButtonLink = styled("a", buttonStyles);
+const ButtonLink = styled("a", button);
 
 export const App: React.FC = () => {
   const accordion = useAccordion();
@@ -19,6 +20,16 @@ export const App: React.FC = () => {
       <TextPanda variant="h1" textTransform="uppercase">
         Panda
       </TextPanda>
+      <ButtonLink variant="primary" shape="circle">
+        Test
+      </ButtonLink>
+      <styled.div>
+        <BoxPanda>Hello World</BoxPanda>
+        <BoxPanda textStyle="h1">Box with textStyle="h1"</BoxPanda>
+        <BoxPanda textStyle="subtitle-md">
+          Box with textStyle="subtitle-md"
+        </BoxPanda>
+      </styled.div>
       <BoxPanda display="flex" gap="xl" my="xxl">
         <LinkPanda variant="primary">Link Primary</LinkPanda>
         <LinkPanda variant="secondary">Link Secondary</LinkPanda>
@@ -86,7 +97,7 @@ export const App: React.FC = () => {
         <TextPanda my="0" variant="sm">
           sm
         </TextPanda>
-        <TextPanda my="0" variant="subtitle-sm">
+        <TextPanda my="0" variant="subtitle-md">
           subtitle-md
         </TextPanda>
         <TextPanda my="0" variant="subtitle-sm">

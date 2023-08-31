@@ -1,17 +1,25 @@
 import { defineConfig } from '@pandacss/dev'
-import { wuiGlobalStyles } from "@welcome-ui/core";
-import { welcomePreset } from '@welcome-ui/themes.welcome'
+import { preset, recipes } from "@welcome-ui/core";
 
 export default defineConfig({
   preflight: true,
-  include: ['./src/panda/**/*.{ts,tsx}', './node_modules/@welcome-ui/**/dist/*.mjs'],
+  include: [
+    './node_modules/@welcome-ui/**/dist/*.mjs',
+    './src/panda/*.{ts,tsx}', 
+  ],
   exclude: [],
   jsxFramework: 'react',
   outdir: '@welcome-ui/panda',
   emitPackage: true,
-  optimize: true,
-  minify: true,
-  hash: true,
-  presets: [welcomePreset],
-  globalCss: wuiGlobalStyles,
+  // optimize: true,
+  // minify: true,
+  // hash: true,
+  presets: [preset],
+  theme: {
+    extend: {
+      recipes: {
+        button: { ...recipes.button, jsx: ['ButtonLink'] }
+      }
+    }
+  }
 })
