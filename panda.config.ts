@@ -1,5 +1,5 @@
 import { defineConfig } from '@pandacss/dev'
-import { preset, recipes } from "@welcome-ui/core";
+import { preset } from "@welcome-ui/core";
 
 export default defineConfig({
   preflight: true,
@@ -15,11 +15,4 @@ export default defineConfig({
   // minify: true,
   // hash: true,
   presets: [preset],
-  theme: {
-    extend: {
-      recipes: {
-        button: { ...recipes.button, jsx: ['ButtonLink'] }
-      }
-    }
-  }
 })

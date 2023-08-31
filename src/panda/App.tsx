@@ -1,5 +1,4 @@
 import React from "react";
-import { BoxPanda } from "@welcome-ui/box";
 import { LinkPanda } from "@welcome-ui/link";
 import { TextPanda } from "@welcome-ui/text";
 import { BadgePanda } from "@welcome-ui/badge";
@@ -15,7 +14,7 @@ export const App: React.FC = () => {
   const accordion = useAccordion();
 
   return (
-    <BoxPanda maxW="800px" mx="auto" py="5xl">
+    <styled.div maxW="800px" mx="auto" py="5xl">
       <a href="/">back</a>
       <TextPanda variant="h1" textTransform="uppercase">
         Panda
@@ -24,24 +23,25 @@ export const App: React.FC = () => {
         Test
       </ButtonLink>
       <styled.div>
-        <BoxPanda>Hello World</BoxPanda>
-        <BoxPanda textStyle="h1">Box with textStyle="h1"</BoxPanda>
-        <BoxPanda textStyle="subtitle-md">
+        <styled.div>Hello World</styled.div>
+        <styled.div textStyle="h1">Box with textStyle="h1"</styled.div>
+        <styled.div textStyle="subtitle-md">
           Box with textStyle="subtitle-md"
-        </BoxPanda>
+        </styled.div>
       </styled.div>
-      <BoxPanda display="flex" gap="xl" my="xxl">
+      <styled.div display="flex" gap="xl" my="xxl">
         <LinkPanda variant="primary">Link Primary</LinkPanda>
         <LinkPanda variant="secondary">Link Secondary</LinkPanda>
-      </BoxPanda>
+      </styled.div>
       <AccordionPanda
         icon={<RightIconPanda />}
         title="Accordion"
         store={accordion}
+        backgroundColor="primary-500"
       >
         Content
       </AccordionPanda>
-      <BoxPanda display="flex" gap="10px" my="3xl">
+      <styled.div display="flex" gap="10px" my="3xl">
         <ButtonPanda variant="primary" backgroundColor="tomato">
           Primary with custom bg
         </ButtonPanda>
@@ -51,16 +51,16 @@ export const App: React.FC = () => {
         <ButtonPanda disabled>Disabled</ButtonPanda>
         <ButtonPanda variant="primary-success">Primary Success</ButtonPanda>
         <ButtonPanda variant="primary-danger">Primary Danger</ButtonPanda>
-      </BoxPanda>
-      <BoxPanda display="flex" gap="10px" my="3xl">
+      </styled.div>
+      <styled.div display="flex" gap="10px" my="3xl">
         <BadgePanda>1</BadgePanda>
         <BadgePanda>99+</BadgePanda>
         <BadgePanda variant="primary">Primary</BadgePanda>
         <BadgePanda variant="primary" disabled>
           Disabled
         </BadgePanda>
-      </BoxPanda>
-      <BoxPanda my="3xl">
+      </styled.div>
+      <styled.div my="3xl">
         <TextPanda lines={1}>
           1 line Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
           quis viverra lectus, vel tristique turpis. Vivamus magna nulla,
@@ -103,8 +103,8 @@ export const App: React.FC = () => {
         <TextPanda my="0" variant="subtitle-sm">
           subtitle-sm
         </TextPanda>
-      </BoxPanda>
-      <BoxPanda>
+      </styled.div>
+      <styled.div>
         <ButtonLink
           href="https://www.welcome-ui.com/"
           target="_blank"
@@ -112,7 +112,7 @@ export const App: React.FC = () => {
         >
           Link as Button
         </ButtonLink>
-      </BoxPanda>
-    </BoxPanda>
+      </styled.div>
+    </styled.div>
   );
 };
